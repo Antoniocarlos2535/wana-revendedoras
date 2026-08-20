@@ -56,6 +56,7 @@
   .wrap{max-width:1080px;margin:0 auto;padding:0 24px;}
   a{color:inherit;text-decoration:none;}
 
+  /* ---------- STICKY CTA (mobile) ---------- */
   .sticky-cta{
     position:fixed;bottom:0;left:0;right:0;z-index:50;
     background:var(--gold);
@@ -69,6 +70,7 @@
   }
   .sticky-cta svg{vertical-align:-3px;margin-right:6px;}
 
+  /* ---------- HERO ---------- */
   .hero{
     position:relative;
     padding:64px 0 72px;
@@ -107,6 +109,7 @@
   .cta-btn:hover{background:var(--gold-soft);transform:translateY(-1px);}
   .cta-sub{font-size:12px;color:var(--muted);margin-top:10px;letter-spacing:0.02em;}
 
+  /* kit visual - signature element */
   .kit-card{
     background:linear-gradient(160deg,var(--surface),var(--surface-2));
     border:1px solid var(--line);
@@ -132,6 +135,7 @@
   .kit-total .label{font-size:14px;color:var(--muted);}
   .kit-total .value{font-family:'Cormorant Garamond',serif;font-size:28px;color:var(--gold);}
 
+  /* ---------- BENEFITS ---------- */
   .benefits{padding:80px 0;}
   .section-head{text-align:center;max-width:560px;margin:0 auto 48px;}
   .section-head h2{font-size:clamp(28px,3.6vw,38px);margin-top:10px;}
@@ -141,4 +145,210 @@
   .benefit h3{font-size:20px;margin-bottom:8px;color:var(--cream);}
   .benefit p{font-size:13.5px;color:var(--muted);}
 
+  /* ---------- COMMISSION TABLE ---------- */
   .commission{padding:80px 0;background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .comm-table{max-width:640px;margin:0 auto;}
+  .comm-row{
+    display:grid;grid-template-columns:1fr auto;align-items:center;
+    padding:20px 24px;background:var(--bg);border:1px solid var(--line);
+    border-radius:5px;margin-bottom:12px;
+  }
+  .comm-row .range{font-size:15px;color:var(--cream);}
+  .comm-row .range span{display:block;font-size:11.5px;color:var(--muted);letter-spacing:0.04em;text-transform:uppercase;margin-top:2px;}
+  .comm-row .pct{font-family:'Cormorant Garamond',serif;font-size:32px;color:var(--gold);}
+  .comm-row.top{border-color:var(--gold);box-shadow:0 0 0 1px var(--gold) inset;}
+
+  /* ---------- STEPS ---------- */
+  .steps{padding:80px 0;}
+  .step-list{display:grid;grid-template-columns:repeat(3,1fr);gap:36px;margin-top:20px;}
+  .step{position:relative;padding-left:44px;}
+  .step .num{
+    position:absolute;left:0;top:0;
+    font-family:'Cormorant Garamond',serif;font-style:italic;font-size:26px;color:var(--gold);
+    width:34px;height:34px;
+  }
+  .step h3{font-size:19px;margin-bottom:8px;}
+  .step p{font-size:13.5px;color:var(--muted);}
+
+  /* ---------- FINAL CTA ---------- */
+  .final{
+    padding:88px 0 100px;text-align:center;
+    background:radial-gradient(ellipse 700px 400px at 50% 0%, rgba(201,162,75,0.14), transparent 65%), var(--bg);
+    border-top:1px solid var(--line);
+  }
+  .final h2{font-size:clamp(28px,4vw,42px);max-width:20ch;margin:14px auto 14px;}
+  .final p{color:var(--muted);max-width:44ch;margin:0 auto 32px;font-size:15px;}
+  .trust{display:flex;gap:28px;justify-content:center;margin-top:44px;flex-wrap:wrap;}
+  .trust .item{font-size:12px;color:var(--muted);display:flex;align-items:center;gap:8px;}
+  .trust .item svg{color:var(--gold);flex-shrink:0;}
+
+  footer{padding:32px 0 96px;text-align:center;font-size:11.5px;color:var(--muted);}
+
+  @media (max-width:860px){
+    .hero-grid{grid-template-columns:1fr;gap:40px;}
+    .benefit-grid{grid-template-columns:1fr 1fr;}
+    .step-list{grid-template-columns:1fr;gap:28px;}
+    .trust{gap:16px 24px;}
+  }
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto;}
+    .cta-btn{transition:none;}
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap hero">
+  <div class="brandmark">
+    <div class="ring">W</div>
+    <div class="name"><b>WANA</b> Semijóias</div>
+  </div>
+
+  <div class="hero-grid">
+    <div>
+      <p class="eyebrow">Parceria de Revenda · Anapu, Pará</p>
+      <h1>Venda semijóias de luxo <em>sem gastar</em> um real do seu bolso</h1>
+      <p class="lead">Você recebe a maleta completa, vende no seu tempo e fica com até 40% de comissão. Só paga pelo que vender — o resto, devolve.</p>
+      <a href="https://wa.me/5591993637622?text=Oi!%20Quero%20ser%20revendedora%20WANA%20e%20vim%20pelo%20an%C3%BAncio." class="cta-btn" onclick="trackWhatsAppClick()">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2m0 1.67c2.24 0 4.35.87 5.94 2.46a8.3 8.3 0 0 1 2.45 5.92c0 4.61-3.76 8.36-8.4 8.36a8.4 8.4 0 0 1-4.27-1.17l-.3-.18-3.12.82.83-3.04-.2-.31a8.3 8.3 0 0 1-1.28-4.44c0-4.61 3.76-8.36 8.35-8.36" opacity=".55"/><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2m4.86 13.3c-.2.58-1.18 1.13-1.63 1.19-.42.06-.94.08-1.51-.1a11 11 0 0 1-1.62-.61c-2.87-1.28-4.68-4.18-4.82-4.38-.14-.19-1.16-1.6-1.16-3.05s.75-2.16 1.02-2.45c.26-.29.57-.36.76-.36l.55.01c.18.01.42-.07.65.53.24.6.8 2.08.87 2.23.07.14.11.31.02.5-.09.19-.14.31-.27.48-.14.16-.29.37-.41.49-.14.14-.28.29-.12.56.16.28.72 1.24 1.56 2.03 1.07 1.02 1.98 1.34 2.24 1.5.27.14.43.12.59-.07.16-.19.68-.82.86-1.1.18-.28.36-.23.6-.14.24.1 1.55.75 1.82.89.27.14.45.21.51.32.07.11.07.65-.13 1.24"/></svg>
+        Quero ser revendedora
+      </a>
+      <div class="cta-sub">Resposta na hora pelo WhatsApp · Sem compromisso</div>
+    </div>
+
+    <div class="kit-card">
+      <div class="tag">Sem risco</div>
+      <div class="kit-title">O que vem na sua maleta</div>
+      <div class="kit-row"><span class="label">Peças de alta qualidade</span><span class="value">✓</span></div>
+      <div class="kit-row"><span class="label">Garantia das peças</span><span class="value">1 ano</span></div>
+      <div class="kit-row"><span class="label">Prazo pra vender</span><span class="value">60 dias</span></div>
+      <div class="kit-row"><span class="label">Investimento inicial</span><span class="value">R$ 0</span></div>
+      <div class="kit-total"><span class="label">Você paga só</span><span class="value">pelo que vender</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="benefits">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Por que revender WANA</p>
+      <h2>Uma renda extra sem risco financeiro</h2>
+    </div>
+    <div class="benefit-grid">
+      <div class="benefit">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+        <h3>Zero investimento</h3>
+        <p>Você não compra nada antes de vender. A maleta é sua pra experimentar.</p>
+      </div>
+      <div class="benefit">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 2l7 4v6c0 5-3.5 8-7 10-3.5-2-7-5-7-10V6l7-4z"/></svg>
+        <h3>Garantia de 1 ano</h3>
+        <p>Toda peça sai com garantia — você vende com confiança e segurança.</p>
+      </div>
+      <div class="benefit">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+        <h3>60 dias pra vender</h3>
+        <p>Sem pressa e sem cobrança em cima de você. Vendeu, paga. Não vendeu, devolve.</p>
+      </div>
+      <div class="benefit">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3 12l6 6L21 6"/></svg>
+        <h3>Maleta nova sempre</h3>
+        <p>A cada ciclo você já sai com peças novas pro próximo giro de vendas.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="commission">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Quanto você ganha</p>
+      <h2>Comissão em cada venda</h2>
+    </div>
+    <div class="comm-table">
+      <div class="comm-row">
+        <div class="range">Vendas até R$ 500<span>por ciclo de 60 dias</span></div>
+        <div class="pct">20%</div>
+      </div>
+      <div class="comm-row">
+        <div class="range">Vendas de R$ 501 a R$ 1.000<span>por ciclo de 60 dias</span></div>
+        <div class="pct">30%</div>
+      </div>
+      <div class="comm-row">
+        <div class="range">Vendas de R$ 1.000 a R$ 1.500<span>por ciclo de 60 dias</span></div>
+        <div class="pct">35%</div>
+      </div>
+      <div class="comm-row top">
+        <div class="range">Vendas acima de R$ 1.500<span>revendedoras destaque</span></div>
+        <div class="pct">40%</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="steps">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Como funciona</p>
+      <h2>Do cadastro à primeira venda</h2>
+    </div>
+    <div class="step-list">
+      <div class="step">
+        <div class="num">01</div>
+        <h3>Pré-cadastro</h3>
+        <p>Você fala com a gente pelo WhatsApp e faz seu cadastro em poucos minutos.</p>
+      </div>
+      <div class="step">
+        <div class="num">02</div>
+        <h3>Recebe a maleta</h3>
+        <p>Combinamos a entrega da sua maleta com as peças, sem custo nenhum.</p>
+      </div>
+      <div class="step">
+        <div class="num">03</div>
+        <h3>Vende e recebe</h3>
+        <p>Você vende no seu ritmo e fica com sua comissão. O resto, devolve.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="final">
+  <div class="wrap">
+    <p class="eyebrow">Comece hoje</p>
+    <h2>Sua maleta de revendedora está a uma mensagem de distância</h2>
+    <p>Fale agora com a gente e comece seu pré-cadastro sem compromisso.</p>
+    <a href="https://wa.me/5591993637622?text=Oi!%20Quero%20ser%20revendedora%20WANA%20e%20vim%20pelo%20an%C3%BAncio." class="cta-btn" onclick="trackWhatsAppClick()">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2m4.86 13.3c-.2.58-1.18 1.13-1.63 1.19-.42.06-.94.08-1.51-.1a11 11 0 0 1-1.62-.61c-2.87-1.28-4.68-4.18-4.82-4.38-.14-.19-1.16-1.6-1.16-3.05s.75-2.16 1.02-2.45c.26-.29.57-.36.76-.36l.55.01c.18.01.42-.07.65.53.24.6.8 2.08.87 2.23.07.14.11.31.02.5-.09.19-.14.31-.27.48-.14.16-.29.37-.41.49-.14.14-.28.29-.12.56.16.28.72 1.24 1.56 2.03 1.07 1.02 1.98 1.34 2.24 1.5.27.14.43.12.59-.07.16-.19.68-.82.86-1.1.18-.28.36-.23.6-.14.24.1 1.55.75 1.82.89.27.14.45.21.51.32.07.11.07.65-.13 1.24"/></svg>
+      Falar no WhatsApp agora
+    </a>
+    <div class="trust">
+      <div class="item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2l7 4v6c0 5-3.5 8-7 10-3.5-2-7-5-7-10V6l7-4z"/></svg> Desde 2012 · Anapu, Pará</div>
+      <div class="item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 12l6 6L21 6"/></svg> Sem taxa de adesão</div>
+      <div class="item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg> Cadastro em minutos</div>
+    </div>
+  </div>
+</div>
+
+<footer>WANA Semijóias de Luxo · Parceria de Consignação para Revendedoras</footer>
+
+<div class="sticky-cta">
+  <a href="https://wa.me/5591993637622?text=Oi!%20Quero%20ser%20revendedora%20WANA%20e%20vim%20pelo%20an%C3%BAncio." onclick="trackWhatsAppClick()">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2m4.86 13.3c-.2.58-1.18 1.13-1.63 1.19-.42.06-.94.08-1.51-.1a11 11 0 0 1-1.62-.61c-2.87-1.28-4.68-4.18-4.82-4.38-.14-.19-1.16-1.6-1.16-3.05s.75-2.16 1.02-2.45c.26-.29.57-.36.76-.36l.55.01c.18.01.42-.07.65.53.24.6.8 2.08.87 2.23.07.14.11.31.02.5-.09.19-.14.31-.27.48-.14.16-.29.37-.41.49-.14.14-.28.29-.12.56.16.28.72 1.24 1.56 2.03 1.07 1.02 1.98 1.34 2.24 1.5.27.14.43.12.59-.07.16-.19.68-.82.86-1.1.18-.28.36-.23.6-.14.24.1 1.55.75 1.82.89.27.14.45.21.51.32.07.11.07.65-.13 1.24"/></svg>
+    Quero ser revendedora — Falar no WhatsApp
+  </a>
+</div>
+
+<script>
+  function trackWhatsAppClick(){
+    gtag('event', 'conversion', {
+        'send_to': 'AW-18399709812/DXbKCO3Rw-QcEP5U1cVE',
+        'value': 1.0,
+        'currency': 'BRL',
+        'transport_type': 'beacon'
+    });
+    console.log('Clique no WhatsApp registrado - conversão enviada ao Google Ads');
+  }
+</script>
+
+</body>
+</html>
